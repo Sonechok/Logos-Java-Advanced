@@ -8,7 +8,7 @@ UPDATE book SET authorLastName = 'Мурата' WHERE id = 42;
 UPDATE book SET authorLastName = 'Андрухович' WHERE id = 27;
 
 #підрахувати кількість книжок, в яких автори мають нагороди
-SELECT sum(numberOfPages) FROM book WHERE authorAwards IS NOT NULL;
+SELECT count(id) FROM book WHERE authorAwards IS NOT NULL;
 
 #вивести інформацію про книжку з найменшою кількістю сторінок
 SELECT * FROM book WHERE numberOfPages = (SELECT min(numberOfPages) FROM book);
@@ -44,7 +44,7 @@ SELECT * FROM book WHERE authorLastName LIKE '%ер';
 #1
 SELECT * FROM book WHERE Price BETWEEN 50 AND 120;
 #2
-SELECT * FROM book WHERE Price > 200 AND Price < 600;
+SELECT * FROM book WHERE Price NOT BETWEEN 200 AND 600;
 
 #3 запити на видалення книжки(за id, name, isbn)
 DELETE FROM book WHERE id = 26;
