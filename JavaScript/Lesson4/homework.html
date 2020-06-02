@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script language="JavaScript" src="homework.js"></script>
+    <style>
+        .menu ul {
+          display: none;
+        }
+        .menu.open ul {
+          display: block;
+        }
+        .external-red{
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        Напишіть код, який:<br>
+        а) В браузері, на сторінці, заповнить кожен з трьох списків ul, кліком по кнопці, довільним текстом. <br>
+            б) На цій ж сторінці виведе кількість всіх елементів li всіх списків.
+    </p>
+    <ul> 
+        <li></li> 
+        <li></li> 
+    </ul> 
+        <br>
+    <ul> 
+        <li></li> 
+        <li></li>
+        <li></li>
+    </ul> 
+        <br>
+    <ul> 
+        <li></li> 
+    </ul>
+    <p>
+        Кількість li елементів:
+    </p>
+    <p id = "firstTask">
+        
+    </p>
+    <input type="button" onclick="firstTask()" value="Перше завдання"/>
+
+    <p>
+        Використовуючи JavaScript, зробіть так, щоб при кліці на кнопку на сторінці в браузері зникав елемент з id = "text".
+    </p>
+    <p id="text">
+        Елемент з id = "text"
+    </p>
+    <input type="button" onclick="secondTask()" value="Друге завдання" />
+    <p>
+        Створіть кнопку, при кліці на яку, вона буде приховувати сама себе.
+    </p>
+    <input type="button" onclick="thirdTask()" value="Третє завдання" id = "buttonThirdTask"/>
+    <p>
+        Створіть меню, яке розкривається\згортається на сторінці в браузері при кліку на його заголовок. Наприклад :<br>
+        а) у розгорнутому вигляді<br>
+        - Університет:<br>
+        ---кафедра ІСМ<br>
+        ---кафедра ЕСМ<br>
+        ---кафедра політології<br>
+        б) у згорнутому вигляді<br>
+        - Університет<br>
+        Клацніть на меню "Університет"
+    </p>
+
+    <div class="menu" id = "fourthTask">
+        <span class="title"  onclick="fourthTask()">Університет</span>
+        <ul>
+          <li>кафедра ІСМ</li>
+          <li>кафедра ЕСМ</li>
+          <li>кафедра політології</li>
+        </ul>
+    </div>
+    <p>
+        В браузері, по кліку на кнопці, зробіть червоний фон для зовнішніх посилань (ті які містять протокол (`http://`, `ftp://`)), додавши їм клас external-red
+    </p>
+    <input type="button" onclick="fifthTask()" value="П'яте завдання"/><br>
+    <a name="list">Список</a> 
+    <ul> 
+        <li><a href="http://google.com">http://google.com</a></li> 
+        <li><a href="/tutorial">/tutorial.html</a></li> 
+        <li><a href="local/path">local/path</a></li> 
+        <li><a href="ftp://ftp.com/my.zip">ftp://ftp.com/my.zip</a></li> 
+        <li><a href="http://nodejs.org">http://nodejs.org</a></li> 
+        <li><a href="http://internal.com/test">http://internal.com/test</a></li> 
+    </ul> 
+
+    
+
+</body>
+
+</html>
