@@ -1,7 +1,12 @@
 USE library;
-ALTER TABLE book DROP FOREIGN KEY book_ibfk_1;
-ALTER TABLE book DROP FOREIGN KEY book_ibfk_2;
-ALTER TABLE library.book  ADD FOREIGN KEY  (category) REFERENCES  library.category(category_name);
+
+ALTER TABLE `library`.`category` 
+ADD COLUMN `id` INT NOT NULL AUTO_INCREMENT AFTER `category_name`,
+DROP PRIMARY KEY,
+ADD PRIMARY KEY (`id`),
+ADD UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE;
+
+
 ALTER TABLE library.book
   DROP COLUMN authorEmail;
   
