@@ -1,0 +1,50 @@
+2020-07-01 20:27:32 [DEBUG] ConnectionManager:33 - Connection was created successfully
+2020-07-01 20:27:32 [DEBUG] UserServiceImpl:40 - Save new user User{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=null}
+2020-07-01 20:28:15 [INFO ] ConnectionManager:24 - Creating connection to data base
+2020-07-01 20:28:24 [DEBUG] ConnectionManager:33 - Connection was created successfully
+2020-07-01 20:28:24 [DEBUG] UserServiceImpl:40 - Save new user User{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=null}
+2020-07-01 20:28:24 [ERROR] UserRepositoryImpl:102 - Error while saving userUser{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=null}
+java.sql.SQLSyntaxErrorException: Unknown column 'course' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at repository.impl.UserRepositoryImpl.save(UserRepositoryImpl.java:100)
+	at repository.impl.UserRepositoryImpl.save(UserRepositoryImpl.java:14)
+	at service.impl.UserServiceImpl.save(UserServiceImpl.java:41)
+	at service.impl.UserServiceImpl.save(UserServiceImpl.java:13)
+	at Main.main(Main.java:22)
+2020-07-01 20:28:25 [DEBUG] ConnectionManager:38 - Close connection
+2020-07-01 20:39:43 [INFO ] ConnectionManager:24 - Creating connection to data base
+2020-07-01 20:39:53 [DEBUG] ConnectionManager:33 - Connection was created successfully
+2020-07-01 20:39:53 [DEBUG] UserServiceImpl:40 - Save new user User{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=1}
+2020-07-01 20:39:53 [ERROR] UserRepositoryImpl:102 - Error while saving userUser{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=1}
+java.sql.SQLSyntaxErrorException: Unknown column 'course' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at repository.impl.UserRepositoryImpl.save(UserRepositoryImpl.java:100)
+	at repository.impl.UserRepositoryImpl.save(UserRepositoryImpl.java:14)
+	at service.impl.UserServiceImpl.save(UserServiceImpl.java:41)
+	at service.impl.UserServiceImpl.save(UserServiceImpl.java:13)
+	at Main.main(Main.java:22)
+2020-07-01 20:39:53 [DEBUG] ConnectionManager:38 - Close connection
+2020-07-01 20:42:32 [INFO ] ConnectionManager:24 - Creating connection to data base
+2020-07-01 20:42:44 [DEBUG] ConnectionManager:33 - Connection was created successfully
+2020-07-01 20:42:44 [DEBUG] UserServiceImpl:40 - Save new user User{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=1}
+2020-07-01 20:45:12 [ERROR] UserRepositoryImpl:102 - Error while saving userUser{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=1}
+java.sql.SQLSyntaxErrorException: Unknown column 'course' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at repository.impl.UserRepositoryImpl.save(UserRepositoryImpl.java:100)
+	at repository.impl.UserRepositoryImpl.save(UserRepositoryImpl.java:14)
+	at service.impl.UserServiceImpl.save(UserServiceImpl.java:41)
+	at service.impl.UserServiceImpl.save(UserServiceImpl.java:13)
+	at Main.main(Main.java:22)
+2020-07-01 20:45:12 [DEBUG] ConnectionManager:38 - Close connection
