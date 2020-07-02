@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class ConnectionManager {
     private static final Logger log = Logger.getLogger(ConnectionManager.class);
 
-    private static final String URL = "jdbc:mysql://localhost:3306/i_shop?serverTimezone=UTC";
+    private static final String URL = "jdbc:mysql://localhost:3306/coding_city?serverTimezone=UTC";
 
     private static String USER_NAME = "newuser";
 

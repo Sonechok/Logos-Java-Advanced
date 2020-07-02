@@ -1,8 +1,9 @@
-2020-06-30 23:26:13 [DEBUG] ConnectionManager:38 - Close connection
-2020-06-30 23:41:15 [INFO ] ConnectionManager:24 - Creating connection to data base
-2020-06-30 23:41:20 [DEBUG] ConnectionManager:33 - Connection was created successfully
-2020-06-30 23:41:20 [DEBUG] UserServiceImpl:40 - Save new user User{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=null}
-2020-06-30 23:41:21 [ERROR] UserRepositoryImpl:102 - Error while saving userUser{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=null}
+2020-07-01 20:27:32 [DEBUG] ConnectionManager:33 - Connection was created successfully
+2020-07-01 20:27:32 [DEBUG] UserServiceImpl:40 - Save new user User{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=null}
+2020-07-01 20:28:15 [INFO ] ConnectionManager:24 - Creating connection to data base
+2020-07-01 20:28:24 [DEBUG] ConnectionManager:33 - Connection was created successfully
+2020-07-01 20:28:24 [DEBUG] UserServiceImpl:40 - Save new user User{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=null}
+2020-07-01 20:28:24 [ERROR] UserRepositoryImpl:102 - Error while saving userUser{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=null}
 java.sql.SQLSyntaxErrorException: Unknown column 'course' in 'field list'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
@@ -14,27 +15,11 @@ java.sql.SQLSyntaxErrorException: Unknown column 'course' in 'field list'
 	at service.impl.UserServiceImpl.save(UserServiceImpl.java:41)
 	at service.impl.UserServiceImpl.save(UserServiceImpl.java:13)
 	at Main.main(Main.java:22)
-2020-06-30 23:41:21 [DEBUG] ConnectionManager:38 - Close connection
-2020-06-30 23:42:19 [INFO ] ConnectionManager:24 - Creating connection to data base
-2020-06-30 23:42:23 [DEBUG] ConnectionManager:33 - Connection was created successfully
-2020-06-30 23:42:23 [DEBUG] UserServiceImpl:40 - Save new user User{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=null}
-2020-06-30 23:42:23 [ERROR] UserRepositoryImpl:102 - Error while saving userUser{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=null}
-java.sql.SQLException: Incorrect integer value: 'Гладун' for column 'id' at row 1
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
-	at repository.impl.UserRepositoryImpl.save(UserRepositoryImpl.java:100)
-	at repository.impl.UserRepositoryImpl.save(UserRepositoryImpl.java:14)
-	at service.impl.UserServiceImpl.save(UserServiceImpl.java:41)
-	at service.impl.UserServiceImpl.save(UserServiceImpl.java:13)
-	at Main.main(Main.java:22)
-2020-06-30 23:42:23 [DEBUG] ConnectionManager:38 - Close connection
-2020-06-30 23:49:27 [INFO ] ConnectionManager:24 - Creating connection to data base
-2020-06-30 23:49:35 [DEBUG] ConnectionManager:33 - Connection was created successfully
-2020-06-30 23:49:35 [DEBUG] UserServiceImpl:40 - Save new user User{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=null}
-2020-06-30 23:49:35 [ERROR] UserRepositoryImpl:102 - Error while saving userUser{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=null}
+2020-07-01 20:28:25 [DEBUG] ConnectionManager:38 - Close connection
+2020-07-01 20:39:43 [INFO ] ConnectionManager:24 - Creating connection to data base
+2020-07-01 20:39:53 [DEBUG] ConnectionManager:33 - Connection was created successfully
+2020-07-01 20:39:53 [DEBUG] UserServiceImpl:40 - Save new user User{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=1}
+2020-07-01 20:39:53 [ERROR] UserRepositoryImpl:102 - Error while saving userUser{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=1}
 java.sql.SQLSyntaxErrorException: Unknown column 'course' in 'field list'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
@@ -46,73 +31,23 @@ java.sql.SQLSyntaxErrorException: Unknown column 'course' in 'field list'
 	at service.impl.UserServiceImpl.save(UserServiceImpl.java:41)
 	at service.impl.UserServiceImpl.save(UserServiceImpl.java:13)
 	at Main.main(Main.java:22)
-2020-06-30 23:49:35 [DEBUG] ConnectionManager:38 - Close connection
-2020-07-01 20:27:16 [INFO ] ConnectionManager:24 - Creating connection to data base
-2020-07-01 20:27:32 [ERROR] ConnectionManager:29 - Error while creating connection to data base with usernewuser and url jdbc:mysql://localhost:3306/i_shop?serverTimezone=UTC
-com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
-	at config.ConnectionManager.createConnection(ConnectionManager.java:27)
-	at repository.impl.UserRepositoryImpl.getInstance(UserRepositoryImpl.java:28)
-	at service.impl.UserServiceImpl.getInstance(UserServiceImpl.java:27)
-	at Main.main(Main.java:11)
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
-	at com.mysql.cj.protocol.a.NativeProtocol.negotiateSSLConnection(NativeProtocol.java:338)
-	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.negotiateSSLConnection(NativeAuthenticationProvider.java:777)
-	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:486)
-	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:202)
-	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1340)
-	at com.mysql.cj.NativeSession.connect(NativeSession.java:157)
-	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
-	... 9 more
-Caused by: javax.net.ssl.SSLException: Программа на вашем хост-компьютере разорвала установленное подключение
-	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:127)
-	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:324)
-	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:267)
-	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:262)
-	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:137)
-	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1460)
-	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1368)
-	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:437)
-	at com.mysql.cj.protocol.ExportControlled.performTlsHandshake(ExportControlled.java:336)
-	at com.mysql.cj.protocol.StandardSocketFactory.performTlsHandshake(StandardSocketFactory.java:188)
-	at com.mysql.cj.protocol.a.NativeSocketConnection.performTlsHandshake(NativeSocketConnection.java:99)
-	at com.mysql.cj.protocol.a.NativeProtocol.negotiateSSLConnection(NativeProtocol.java:329)
-	... 16 more
-	Suppressed: java.net.SocketException: Программа на вашем хост-компьютере разорвала установленное подключение
-		at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:421)
-		at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:441)
-		at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:825)
-		at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1007)
-		at java.base/sun.security.ssl.SSLSocketOutputRecord.encodeAlert(SSLSocketOutputRecord.java:82)
-		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:355)
-		... 26 more
-Caused by: java.net.SocketException: Программа на вашем хост-компьютере разорвала установленное подключение
-	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:326)
-	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:351)
-	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:802)
-	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:937)
-	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:450)
-	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:165)
-	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:108)
-	... 23 more
+2020-07-01 20:39:53 [DEBUG] ConnectionManager:38 - Close connection
+2020-07-01 20:42:32 [INFO ] ConnectionManager:24 - Creating connection to data base
+2020-07-01 20:42:44 [DEBUG] ConnectionManager:33 - Connection was created successfully
+2020-07-01 20:42:44 [DEBUG] UserServiceImpl:40 - Save new user User{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=1}
+2020-07-01 20:45:12 [ERROR] UserRepositoryImpl:102 - Error while saving userUser{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=1}
+java.sql.SQLSyntaxErrorException: Unknown column 'course' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at repository.impl.UserRepositoryImpl.save(UserRepositoryImpl.java:100)
+	at repository.impl.UserRepositoryImpl.save(UserRepositoryImpl.java:14)
+	at service.impl.UserServiceImpl.save(UserServiceImpl.java:41)
+	at service.impl.UserServiceImpl.save(UserServiceImpl.java:13)
+	at Main.main(Main.java:22)
+2020-07-01 20:45:12 [DEBUG] ConnectionManager:38 - Close connection
+2020-07-01 23:26:03 [INFO ] ConnectionManager:24 - Creating connection to data base
+2020-07-01 23:26:10 [DEBUG] ConnectionManager:33 - Connection was created successfully
+2020-07-01 23:26:10 [DEBUG] UserServiceImpl:40 - Save new user User{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=1}
