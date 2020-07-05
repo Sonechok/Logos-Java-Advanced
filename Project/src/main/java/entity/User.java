@@ -1,7 +1,5 @@
 package entity;
 
-import java.math.BigDecimal;
-
 public class User {
     private Integer id;
 
@@ -15,21 +13,17 @@ public class User {
 
     private String password;
 
-    private BigDecimal amountOfMoney;
-
-    private Integer courseId;
+    private Integer course;
 
     public User(){}
 
-    public User(String firstName, String lastName, String email, String role, String password,
-                BigDecimal amountOfMoney, Integer courseId) {
+    public User(String firstName, String lastName, String email, String role, String password, Integer course) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.role = role;
         this.password = password;
-        this.amountOfMoney = amountOfMoney;
-        this.courseId = courseId;
+        this.course = course;
     }
 
     public Integer getId() {
@@ -80,20 +74,12 @@ public class User {
         this.password = password;
     }
 
-    public BigDecimal getAmountOfMoney() {
-        return amountOfMoney;
+    public Integer getCourse() {
+        return course;
     }
 
-    public void setAmountOfMoney(BigDecimal amountOfMoney) {
-        this.amountOfMoney = amountOfMoney;
-    }
-
-    public Integer getCourseId() {
-        return courseId;
-    }
-
-    public void setCourseId(Integer courseId) {
-        this.courseId = courseId;
+    public void setCourse(Integer course) {
+        this.course = course;
     }
 
     @Override
@@ -105,8 +91,7 @@ public class User {
                 ", email='" + email + '\'' +
                 ", role='" + role + '\'' +
                 ", password='" + password + '\'' +
-                ", amountOfMoney=" + amountOfMoney +
-                ", courseId=" + courseId +
+                ", course=" + course +
                 '}';
     }
 }

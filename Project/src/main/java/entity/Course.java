@@ -11,6 +11,10 @@ public class Course {
 
     private BigDecimal price;
 
+    public Course(){
+
+    }
+
     public Course(Integer id, String name, String description, BigDecimal price) {
         this.id = id;
         this.name = name;

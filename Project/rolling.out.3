@@ -1,64 +1,61 @@
-2020-06-30 23:07:45 [DEBUG] ConnectionManager:38 - Close connection
-2020-06-30 23:11:23 [INFO ] ConnectionManager:24 - Creating connection to data base
-2020-06-30 23:11:29 [DEBUG] ConnectionManager:33 - Connection was created successfully
-2020-06-30 23:11:29 [DEBUG] UserServiceImpl:40 - Save new user User{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=null}
-2020-06-30 23:11:29 [ERROR] UserRepositoryImpl:102 - Error while saving userUser{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=null}
+2020-07-05 21:37:00 [DEBUG] UserServiceImpl:34 - Find user by email oleg@glaun.com
+2020-07-05 21:37:00 [DEBUG] UserServiceImpl:46 - Update user User{id=5, firstName='Гладун', lastName='Олег', email='oleg@glaun.com', role='USER', password='oleg123', course=1}
+2020-07-05 21:37:00 [ERROR] UserRepositoryImpl:115 - Error while updating user User{id=5, firstName='Гладун', lastName='Олег', email='oleg@glaun.com', role='USER', password='oleg123', course=1}
 java.sql.SQLSyntaxErrorException: Unknown column 'course_id' in 'field list'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
-	at repository.impl.UserRepositoryImpl.save(UserRepositoryImpl.java:100)
-	at repository.impl.UserRepositoryImpl.save(UserRepositoryImpl.java:14)
-	at service.impl.UserServiceImpl.save(UserServiceImpl.java:41)
-	at service.impl.UserServiceImpl.save(UserServiceImpl.java:13)
-	at Main.main(Main.java:22)
-2020-06-30 23:11:29 [DEBUG] ConnectionManager:38 - Close connection
-2020-06-30 23:13:57 [INFO ] ConnectionManager:24 - Creating connection to data base
-2020-06-30 23:14:01 [DEBUG] ConnectionManager:33 - Connection was created successfully
-2020-06-30 23:14:01 [DEBUG] UserServiceImpl:40 - Save new user User{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=null}
-2020-06-30 23:14:02 [ERROR] UserRepositoryImpl:102 - Error while saving userUser{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=null}
-java.sql.SQLSyntaxErrorException: Unknown column 'course_id' in 'field list'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
-	at repository.impl.UserRepositoryImpl.save(UserRepositoryImpl.java:100)
-	at repository.impl.UserRepositoryImpl.save(UserRepositoryImpl.java:14)
-	at service.impl.UserServiceImpl.save(UserServiceImpl.java:41)
-	at service.impl.UserServiceImpl.save(UserServiceImpl.java:13)
-	at Main.main(Main.java:22)
-2020-06-30 23:14:02 [DEBUG] ConnectionManager:38 - Close connection
-2020-06-30 23:18:17 [INFO ] ConnectionManager:24 - Creating connection to data base
-2020-06-30 23:18:22 [DEBUG] ConnectionManager:33 - Connection was created successfully
-2020-06-30 23:18:22 [DEBUG] UserServiceImpl:40 - Save new user User{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=null}
-2020-06-30 23:18:22 [ERROR] UserRepositoryImpl:102 - Error while saving userUser{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=null}
-java.sql.SQLSyntaxErrorException: Unknown column 'course_id' in 'field list'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
-	at repository.impl.UserRepositoryImpl.save(UserRepositoryImpl.java:100)
-	at repository.impl.UserRepositoryImpl.save(UserRepositoryImpl.java:14)
-	at service.impl.UserServiceImpl.save(UserServiceImpl.java:41)
-	at service.impl.UserServiceImpl.save(UserServiceImpl.java:13)
-	at Main.main(Main.java:22)
-2020-06-30 23:18:22 [DEBUG] ConnectionManager:38 - Close connection
-2020-06-30 23:26:08 [INFO ] ConnectionManager:24 - Creating connection to data base
-2020-06-30 23:26:12 [DEBUG] ConnectionManager:33 - Connection was created successfully
-2020-06-30 23:26:12 [DEBUG] UserServiceImpl:40 - Save new user User{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=null}
-2020-06-30 23:26:12 [ERROR] UserRepositoryImpl:102 - Error while saving userUser{id=null, firstName='Гладун', lastName='Олег', email='oleg@gladun.com', role='USER', password='oleg123', amountOfMoney=0.0, courseId=null}
-java.sql.SQLSyntaxErrorException: Unknown column 'course' in 'field list'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
-	at repository.impl.UserRepositoryImpl.save(UserRepositoryImpl.java:100)
-	at repository.impl.UserRepositoryImpl.save(UserRepositoryImpl.java:14)
-	at service.impl.UserServiceImpl.save(UserServiceImpl.java:41)
-	at service.impl.UserServiceImpl.save(UserServiceImpl.java:13)
-	at Main.main(Main.java:22)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at repository.impl.UserRepositoryImpl.update(UserRepositoryImpl.java:113)
+	at repository.impl.UserRepositoryImpl.update(UserRepositoryImpl.java:13)
+	at service.impl.UserServiceImpl.update(UserServiceImpl.java:47)
+	at service.impl.UserServiceImpl.update(UserServiceImpl.java:13)
+	at controllers.CoursesController.doPost(CoursesController.java:54)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at controllers.filter.AuthorityFilter.doFilter(AuthorityFilter.java:34)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2020-07-05 21:38:36 [INFO ] AuthorityFilter:18 - Init filter controllers.filter.AuthorityFilter
+2020-07-05 21:38:37 [INFO ] ConnectionManager:24 - Creating connection to data base
+2020-07-05 21:38:39 [DEBUG] ConnectionManager:33 - Connection was created successfully
+2020-07-05 21:38:39 [INFO ] ConnectionManager:24 - Creating connection to data base
+2020-07-05 21:38:39 [DEBUG] ConnectionManager:33 - Connection was created successfully
+2020-07-05 21:38:39 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 21:38:39 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 21:38:39 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 21:38:41 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 21:38:41 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 21:38:41 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 21:38:41 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 21:38:41 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 21:38:41 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 21:38:41 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 21:38:41 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 21:38:42 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 21:38:42 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 21:38:42 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 21:38:42 [INFO ] AuthorityFilter:23 - Filter log in

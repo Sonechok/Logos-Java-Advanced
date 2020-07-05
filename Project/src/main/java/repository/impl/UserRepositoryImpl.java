@@ -5,7 +5,6 @@ import entity.User;
 import org.apache.log4j.Logger;
 import repository.UserRepository;
 
-import java.math.BigDecimal;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,16 +37,14 @@ public class UserRepositoryImpl implements UserRepository {
         String lastName = resultSet.getString("last_name");
         String role = resultSet.getString("role");
         String password = resultSet.getString("password");
-        BigDecimal amountOfMoney = resultSet.getBigDecimal("money");
-        Integer course_id = resultSet.getInt("course_id");
+        Integer course = resultSet.getInt("course");
         user.setId(id);
         user.setEmail(email);
         user.setFirstName(firstName);
         user.setLastName(lastName);
         user.setPassword(password);
         user.setRole(role);
-        user.setAmountOfMoney(amountOfMoney);
-        user.setCourseId(course_id);
+        user.setCourse(course);
         return user;
     }
 
@@ -85,18 +82,17 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public void save(User user) {
         try (PreparedStatement statement = connection.prepareStatement(
-                "insert into users ( first_name , last_name , email , password , role , course , money ) value (?, ?, ?, ?, ?, ?, ?)")) {
+                "insert into users ( first_name , last_name , email , password , role , course ) value (?, ?, ?, ?, ?, ?)")) {
             statement.setString(1, user.getFirstName());
             statement.setString(2, user.getLastName());
             statement.setString(3, user.getEmail());
             statement.setString(4, user.getPassword());
             statement.setString(5, user.getRole());
-            if (user.getCourseId() == null){
+            if (user.getCourse() == null){
                 statement.setNull(6, Types.INTEGER);
             } else {
-                statement.setInt(6, user.getCourseId());
+                statement.setInt(6, user.getCourse());
             }
-            statement.setBigDecimal(7, user.getAmountOfMoney());
             statement.execute();
         } catch (SQLException e) {
             log.error("Error while saving user" + user, e);
@@ -106,15 +102,14 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public void update(User user) {
         try (PreparedStatement statement = connection.prepareStatement(
-                "update users set first_name =?, last_name=?, email=?, password=?, role=?, money=?, course_id=? where id =?")) {
+                "update users set first_name =?, last_name=?, email=?, password=?, role=?, course=? where id =?")) {
             statement.setString(1, user.getFirstName());
             statement.setString(2, user.getLastName());
             statement.setString(3, user.getEmail());
             statement.setString(4, user.getPassword());
             statement.setString(5, user.getRole());
-            statement.setBigDecimal(6, user.getAmountOfMoney());
-            statement.setInt(7, user.getCourseId());
-            statement.setInt(8, user.getId());
+            statement.setInt(6, user.getCourse());
+            statement.setInt(7, user.getId());
             statement.executeUpdate();
         } catch (SQLException e) {
             log.error("Error while updating user " + user, e);
