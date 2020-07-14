@@ -2,7 +2,7 @@ import entity.User;
 import repository.UserRepository;
 import repository.impl.UserRepositoryImpl;
 
-public class Main_jpa {
+public class MainJPA {
     public static void main(String[] args) {
         UserRepository userService = UserRepositoryImpl.getInstance();
         User user = new User();
