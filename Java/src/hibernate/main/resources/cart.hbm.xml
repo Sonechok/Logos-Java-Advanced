@@ -3,8 +3,8 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
-<hibernate-mapping package="entity">
-    <class name="Cart" table="carts">
+<hibernate-mapping>
+    <class name="entity.Cart" table="carts">
         <id name="id" column="cart_id">
             <generator class="native"/>
         </id>
@@ -15,7 +15,7 @@
 
         <set name="itemSet" table="cart_item" cascade="save-update">
             <key column="cart_id"/>
-            <many-to-many column="item_id" class="entity.Item" />
+            <many-to-many column="item_id" class="entity.Cart" />
         </set>
 
     </class>

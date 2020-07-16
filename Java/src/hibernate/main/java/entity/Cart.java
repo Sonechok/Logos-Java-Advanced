@@ -1,19 +1,26 @@
 package entity;
 
-
-import java.util.HashSet;
-import java.util.Objects;
 import java.util.Set;
 
 public class Cart {
 
-    private Integer id;
+    private long  id;
 
     private Integer total;
 
     private String name;
 
-    private Set<Item> itemSet = new HashSet<Item>();
+    private Set<Item> itemSet;
+
+    private Item item;
+
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
+    }
 
     public Cart() {
     }
@@ -23,15 +30,11 @@ public class Cart {
         this.name = name;
     }
 
-    public boolean addItem(Item item){
-        return this.itemSet.add(item);
-    }
-
-    public Integer getId() {
+    public long  getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -59,18 +62,4 @@ public class Cart {
         this.itemSet = itemSet;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Cart cart = (Cart) o;
-        return id.equals(cart.id) &&
-                Objects.equals(total, cart.total) &&
-                Objects.equals(name, cart.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, total, name);
-    }
 }

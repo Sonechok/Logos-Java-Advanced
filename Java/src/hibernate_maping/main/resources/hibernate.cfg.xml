@@ -5,14 +5,17 @@
 
     <session-factory>
         <!-- JDBC Database connection settings -->
-        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate_logos?serverTimezone=UTC</property>
         <property name="hibernate.connection.username">newuser</property>
         <property name="hibernate.connection.password">12345qwert</property>
         <property name="hibernate.hbm2ddl.auto">create</property>
+
+        <!-- Select our SQL dialect -->
+
         <!-- Echo the SQL to stdout -->
         <property name="hibernate.show_sql">true</property>
-        <mapping resource="cart.hbm.xml"/>
-        <mapping resource="item.hbm.xml"/>
+        <mapping class="entity.Comment"/>
+        <mapping class="entity.Post"/>
     </session-factory>
 </hibernate-configuration>

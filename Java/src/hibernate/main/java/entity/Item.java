@@ -16,9 +16,6 @@ public class Item {
     public Item() {
     }
 
-    public boolean addCart(Cart cart){
-        return this.cartSet.add(cart);
-    }
 
     public Integer getId() {
         return id;
