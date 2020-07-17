@@ -1,9 +1,9 @@
-2020-06-22 23:57:50 ERROR MainLesson3:10 - Error message
-2020-06-23 00:03:52 ERROR MainLesson3:10 - Error message
-2020-06-23 00:14:52 ERROR MainLesson3:10 - Error message
-2020-06-23 00:18:17 ERROR MainLesson3:10 - Error message
-2020-06-23 00:21:04 ERROR MainLesson3:10 - Error message
-2020-06-23 00:21:39 ERROR MainLesson3:10 - Error message
+2020-06-22 23:57:50 ERROR lesson3_log4j.MainLesson3:10 - Error message
+2020-06-23 00:03:52 ERROR lesson3_log4j.MainLesson3:10 - Error message
+2020-06-23 00:14:52 ERROR lesson3_log4j.MainLesson3:10 - Error message
+2020-06-23 00:18:17 ERROR lesson3_log4j.MainLesson3:10 - Error message
+2020-06-23 00:21:04 ERROR lesson3_log4j.MainLesson3:10 - Error message
+2020-06-23 00:21:39 ERROR lesson3_log4j.MainLesson3:10 - Error message
 2020-07-11 20:17:46 ERROR SqlExceptionHelper:142 - Unknown database 'coding_ity'
 2020-07-15 18:38:22 ERROR SchemaExport:426 - HHH000389: Unsuccessful: alter table comment drop foreign key FK_f1sl0xkd2lucs7bve3ktt3tu5
 2020-07-15 18:38:22 ERROR SchemaExport:427 - Can't DROP 'FK_f1sl0xkd2lucs7bve3ktt3tu5'; check that column/key exists
@@ -33,4 +33,12 @@
 2020-07-16 20:45:16 ERROR SchemaExport:427 - REFERENCES command denied to user 'newuser'@'localhost' for table 'hibernate_logos.items'
 2020-07-16 20:45:16 ERROR SchemaExport:426 - HHH000389: Unsuccessful: alter table cart_item add constraint FK_l5j5nns4rldk9e37ns442xqhx foreign key (item_id) references items (item_id)
 2020-07-16 20:45:16 ERROR SchemaExport:427 - REFERENCES command denied to user 'newuser'@'localhost' for table 'hibernate_logos.items'
-2020-07-16 20:45:17 ERROR BasicPropertyAccessor:191 - HHH000122: IllegalArgumentException in class: entity.Cart, getter method of property: id
+2020-07-16 20:45:17 ERROR BasicPropertyAccessor:191 - HHH000122: IllegalArgumentException in class: jpa.hibernate.many_to_many.hibernate.one_to_many.entity.Cart, getter method of property: id
+2020-07-17 22:48:00 ERROR SchemaExport:426 - HHH000389: Unsuccessful: alter table comment drop foreign key FK_f1sl0xkd2lucs7bve3ktt3tu5
+2020-07-17 22:48:00 ERROR SchemaExport:427 - Can't DROP 'FK_f1sl0xkd2lucs7bve3ktt3tu5'; check that column/key exists
+2020-07-17 22:48:03 ERROR SchemaExport:426 - HHH000389: Unsuccessful: alter table comment add constraint FK_f1sl0xkd2lucs7bve3ktt3tu5 foreign key (post_id) references posts (post_id)
+2020-07-17 22:48:03 ERROR SchemaExport:427 - REFERENCES command denied to user 'newuser'@'localhost' for table 'hibernate_logos.posts'
+2020-07-17 22:51:31 ERROR SchemaExport:426 - HHH000389: Unsuccessful: alter table comment drop foreign key FK_f1sl0xkd2lucs7bve3ktt3tu5
+2020-07-17 22:51:31 ERROR SchemaExport:427 - Can't DROP 'FK_f1sl0xkd2lucs7bve3ktt3tu5'; check that column/key exists
+2020-07-17 22:51:34 ERROR SchemaExport:426 - HHH000389: Unsuccessful: alter table comment add constraint FK_f1sl0xkd2lucs7bve3ktt3tu5 foreign key (post_id) references posts (post_id)
+2020-07-17 22:51:34 ERROR SchemaExport:427 - REFERENCES command denied to user 'newuser'@'localhost' for table 'hibernate_logos.posts'

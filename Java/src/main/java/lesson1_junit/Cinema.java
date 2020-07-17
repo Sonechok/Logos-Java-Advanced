@@ -1,10 +1,11 @@
+package lesson1_junit;
+
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.Scanner;
 import java.util.TreeMap;
 
 public class Cinema {
-    TreeMap<Days, Schedule> schedules;
+    public TreeMap<Days, Schedule> schedules;
     private ArrayList<Movie> moviesLibrary = new ArrayList<>();
     private Time open;
     private Time close;

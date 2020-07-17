@@ -1,3 +1,5 @@
+package lesson1_junit;
+
 import java.util.Objects;
 
 public class Time implements Comparable<Time>{
