@@ -2,6 +2,7 @@ package logos.springcore.service.impl;
 
 import logos.springcore.entity.Student;
 import logos.springcore.repository.StudentRepository;
+import logos.springcore.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class StudentServiceImpl implements StudentRepository{
+public class StudentServiceImpl implements StudentService {
     private StudentRepository studentRepository;
 
     @Autowired
