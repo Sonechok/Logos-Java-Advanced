@@ -1,40 +1,28 @@
-package codingcity.entity;
+package codingcity.dto;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name = "tasks")
-public class Task {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class TaskDTO {
     private Long id;
 
-    @Column(name = "number_of_day", nullable = false)
     private Integer numberOfDay;
 
-    @Column(nullable = false)
     private String task;
 
     private String links;
 
-    /*@OneToOne
-    private UserProgress progress;*/
+    public TaskDTO(Integer numberOfDay, String task, String links) {
+        this.numberOfDay = numberOfDay;
+        this.task = task;
+        this.links = links;
+    }
 
-    public Task(Long id, Integer numberOfDay, String task, String links) {
+    public TaskDTO(Long id, Integer numberOfDay, String task, String links) {
         this.id = id;
         this.numberOfDay = numberOfDay;
         this.task = task;
         this.links = links;
-        //this.progress = progress;
     }
 
-    public Task(Integer numberOfDay, String task, String links) {
-        this.numberOfDay = numberOfDay;
-        this.task = task;
-        this.links = links;
-    }
-
-    public Task() {
+    public TaskDTO() {
     }
 
     public Long getId() {
@@ -68,12 +56,4 @@ public class Task {
     public void setLinks(String links) {
         this.links = links;
     }
-
-    /*public UserProgress getProgress() {
-        return progress;
-    }
-
-    public void setProgress(UserProgress progress) {
-        this.progress = progress;
-    }*/
 }

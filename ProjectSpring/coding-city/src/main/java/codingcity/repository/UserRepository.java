@@ -1,5 +1,6 @@
 package codingcity.repository;
 
+import codingcity.dto.UserDTO;
 import codingcity.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
