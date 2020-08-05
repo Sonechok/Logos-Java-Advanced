@@ -23,11 +23,13 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    @Column(nullable = false)
-    private String role;
 
     @Column(name = "amount_of_money")
     private Integer amountOfMoney;
+
+    @ManyToMany
+    @JoinTable
+    private Set<Role> roles = new HashSet<>();
 
     @ManyToMany
     @JoinTable(
@@ -46,7 +48,7 @@ public class User {
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.role = role;
+
         this.amountOfMoney = amountOfMoney;
         this.courses = courses;
         this.progresses = progresses;
@@ -61,7 +63,7 @@ public class User {
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.role = role;
+
         this.amountOfMoney = amountOfMoney;
     }
 
@@ -70,7 +72,6 @@ public class User {
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.role = role;
         this.amountOfMoney = amountOfMoney;
     }
 
@@ -114,14 +115,6 @@ public class User {
         this.password = password;
     }
 
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
-    }
-
     public Integer getAmountOfMoney() {
         return amountOfMoney;
     }
@@ -144,5 +137,13 @@ public class User {
 
     public void setProgresses(Set<UserProgress> progresses) {
         this.progresses = progresses;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 }

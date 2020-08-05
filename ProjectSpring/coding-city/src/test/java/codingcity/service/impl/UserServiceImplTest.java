@@ -2,20 +2,16 @@ package codingcity.service.impl;
 
 import codingcity.dto.UserDTO;
 import codingcity.entity.User;
+import codingcity.repository.RoleRepository;
 import codingcity.repository.UserRepository;
 import codingcity.service.UserService;
 import codingcity.service.mapper.UserMapper;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import java.util.Optional;
-
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
@@ -27,11 +23,15 @@ class UserServiceImplTest {
 
     UserMapper userMapper;
 
+    BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    RoleRepository roleRepository;
+
     @BeforeEach
     void setUp() {
         userRepository = Mockito.mock(UserRepository.class);
         userMapper = Mockito.mock(UserMapper.class);
-        userService = new UserServiceImpl(userRepository, userMapper);
+        userService = new UserServiceImpl(userRepository, userMapper, bCryptPasswordEncoder, roleRepository);
 
     }
 

@@ -2,26 +2,31 @@ package codingcity.service.impl;
 
 import codingcity.dto.UserDTO;
 import codingcity.entity.User;
+import codingcity.entity.Role;
 import codingcity.error.ResourceNotFoundException;
+import codingcity.repository.RoleRepository;
 import codingcity.repository.UserRepository;
 import codingcity.service.UserService;
 import codingcity.service.mapper.UserMapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private final UserMapper userMapper;
+    private final BCryptPasswordEncoder bCryptPasswordEncoder;
+    private final RoleRepository roleRepository;
 
     @Autowired
-    public UserServiceImpl(UserRepository userRepository, UserMapper userMapper) {
+    public UserServiceImpl(UserRepository userRepository, UserMapper userMapper, BCryptPasswordEncoder bCryptPasswordEncoder, RoleRepository roleRepository) {
         this.userRepository = userRepository;
         this.userMapper = userMapper;
+        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+        this.roleRepository = roleRepository;
     }
 
     @Override
@@ -31,6 +36,9 @@ public class UserServiceImpl implements UserService {
             userDTO.setAmountOfMoney(0);
         }
         User user = userMapper.toEntity(userDTO);
+        Role role = roleRepository.findByName("USER").orElseThrow(() -> new ResourceNotFoundException("ROLE_User", "ROLE_USER"));
+        user.getRoles().add(role);
+        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         return userMapper.toDTO(userRepository.save(user));
     }
 

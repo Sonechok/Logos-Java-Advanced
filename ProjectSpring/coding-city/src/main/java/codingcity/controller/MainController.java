@@ -11,7 +11,4 @@ public class MainController {
     public String createMainPage(Model model) {
         return "main";
     }
-
-
-
 }
