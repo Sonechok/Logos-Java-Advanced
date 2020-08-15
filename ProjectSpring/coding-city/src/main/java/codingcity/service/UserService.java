@@ -11,4 +11,10 @@ public interface UserService {
     UserDTO updateUser(User user);
 
     UserDTO findByEmail(String email);
+
+    User findUserByEmail(String email);
+
+    long count();
+
+    UserDTO updateAmountOfMoney(User user, Integer amountOfMoney);
 }

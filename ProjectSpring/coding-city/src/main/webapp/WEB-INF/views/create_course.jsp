@@ -24,7 +24,20 @@
 			<div class="header_logo"><a class="nav_link" href="${contextPath}/main">Coding City</a></div>
 			<nav class="nav">
 				<ul>
-					<li><a class="nav_link" href="${contextPath}/login">Login</a></li>
+                    <sec:authorize access="isAuthenticated()">
+                      <li><a class="nav_link" href="#">Cabinet</a>
+                                   <ul class="submenu">
+                                        <li><a class="nav_link" href="${contextPath}/cabinet">Your profile</a></li>
+                                        <li><a class="nav_link" href="${contextPath}/logout">Sign out</a></li>
+                                  </ul>
+                      </li>
+                      <li><a class="nav_link" href="${contextPath}/courses">Our courses</a></li>
+                    </sec:authorize>
+                    <sec:authorize access="!isAuthenticated()">
+                    <ul>
+                         <li><a class="nav_link" href="${contextPath}/login">Sign in</a></li>
+                    </ul>
+                     </sec:authorize>
 				</ul>
 			</nav>
 		</div>
@@ -36,17 +49,13 @@
 				<div class="registration"  id="reg">
 		          <div class="container">
                       <div class="intro_inner">
-
-                      <springForm:form method="POST" modelAttribute="user" class="box">
-
-                              <h2 class="section_title1">Registration</h2>
-                              <springForm:input type="text" placeholder="First name" path="firstName"/>
-                              <springForm:input type="text" placeholder="Last name" path="lastName"/>
-                              <springForm:input type="email" placeholder="Email" path="email"/>
-                              <springForm:input type="password" placeholder="Password" path="password" minlength="8"/>
-                              <button class="btn-submit" type="submit">Register</button>
-                       </springForm:form>
-
+                      <form method="POST" action="${contextPath}/admin/create_courses" class="box">
+                          <h2 class="section_title1">refill</h2>
+                          <input type="number" name="price" placeholder="price">
+                          <input type="text" name="name" placeholder="name">
+                          <input type="text" name="description" placeholder="description">
+                          <input type="submit" name="" value="Create">
+                      </form>
 			     </div>
               </div>
 	            </div>

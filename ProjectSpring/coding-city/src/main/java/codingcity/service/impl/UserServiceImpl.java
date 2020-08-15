@@ -60,4 +60,26 @@ public class UserServiceImpl implements UserService {
         User user = userRepository.findByEmail(email).orElseThrow(()->new ResourceNotFoundException("email",email));
         return userMapper.toDTO(user);
     }
+
+    @Override
+    public User findUserByEmail(String email) {
+        return userRepository.findByEmail(email).orElseThrow(()->new ResourceNotFoundException("email",email));
+    }
+
+    @Override
+    public long count() {
+            return userRepository.count();
+    }
+
+    @Override
+    public UserDTO updateAmountOfMoney(User user, Integer amountOfMoney) {
+        if (user.getAmountOfMoney() == null){
+            user.setAmountOfMoney(0);
+        }
+        User userToUpdate = userRepository.getOne(user.getId());
+        userToUpdate.setAmountOfMoney(user.getAmountOfMoney()+amountOfMoney);
+        return userMapper.toDTO(userRepository.save(userToUpdate));
+    }
+
+
 }

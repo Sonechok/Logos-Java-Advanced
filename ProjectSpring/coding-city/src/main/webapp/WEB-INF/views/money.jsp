@@ -24,7 +24,7 @@
 			<nav class="nav">
 				<ul>
 				    <sec:authorize access="hasAuthority('ADMIN')">
-                        <li><a class="nav_link" href="${contextPath}/admin/create_courses">Create course</a></li>
+                        <li><a class="nav_link" href="${contextPath}admin/create_courses">Create course</a></li>
                     </sec:authorize>
                     <sec:authorize access="isAuthenticated()">
                       <li><a class="nav_link" href="#">Cabinet</a>
@@ -45,69 +45,22 @@
 		</div>
 	</div>
 </header>
-	<div class="intro">
-		<div class="container">
-			<div class="intro_inner">
-				<h1 class="intro_title">Welcome to CodingCity</h1>
-				<a class="btn" href="#start">Let's start</a>
-			</div>
-		</div>
-	</div>
-	<section class="section" id="start">
-		<div class="container">
-			<div class="section_header">
-				<h3 class="section_subtitle">What we do</h3>
-				<h2 class="section_title">Story about us</h2>
-				<div class="section_text">
-					<p class="text">We are a little company, which helps people to "enter" the IT. </p>
-				</div>
-			</div>
-
-			<div class="about">
-				<div class="about_item">
-					<div class="about_img">
-						<img class="about_imgs" src="${contextPath}/resources/images/about1.jpg">
-					</div>
-					<div class="about_text">
-						advanced technologies
-					</div>
-				</div>
-				<div class="about_item">
-					<div class="about_img">
-						<img class="about_imgs" src="${contextPath}/resources/images/about3.jpg">
-					</div>
-					<div class="about_text">
-						super team
-					</div>
-				</div>
-				<div class="about_item">
-					<div class="about_img">
-						<img class="about_imgs" src="${contextPath}/resources/images/about2.jpg">
-					</div>
-					<div class="about_text">
-						employment
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<div class="statistic">
-		<div class="container">
-			<div class="stat">
-				<div class="stat_item">
-					<div class="stat_num">${statistic.countOfUsers}</div>
-					<div class="stat_text">students</div>
-				</div>
-				<div class="stat_item">
-					<div class="stat_num">${statistic.countOfAppliedUsers}</div>
-					<div class="stat_text">employed students</div>
-				</div>
-				<div class="stat_item">
-					<div class="stat_num">${statistic.countOfCourses}</div>
-					<div class="stat_text">courses</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<div data-vide-bg="${contextPath}/resources/videos/background.gif">
+    		<div class="container">
+    			<div class="intro_inner">
+    				<div class="registration"  id="reg">
+    		          <div class="container">
+                          <div class="intro_inner">
+                          <form method="POST" action="${contextPath}/cabinet/money" class="box">
+                                                        <h2 class="section_title1">refill</h2>
+                                                        <input type="number" name="amountOfMoney" placeholder="amountOfMoney">
+                                                        <input type="submit" name="" value="Refill">
+                                                </form>
+    			     </div>
+                  </div>
+    	            </div>
+    			</div>
+    		</div>
+    	</div>
 </body>
 </html>

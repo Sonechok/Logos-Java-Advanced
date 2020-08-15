@@ -6,7 +6,9 @@ import codingcity.entity.UserProgress;
 public interface UserProgressService {
     UserProgressDTO createUserProgressForTask(UserProgress userProgress, Long userId);
 
-    UserProgressDTO updateUserProgress(UserProgress userProgress);
+    UserProgress createUserProgressNoDTOForTask(UserProgress userProgress, Long userId);
+
+    UserProgressDTO updateUserProgress(Long taskId, Long userId, String status);
 
     UserProgress findById(Long progressId);
 

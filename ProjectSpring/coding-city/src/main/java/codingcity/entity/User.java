@@ -23,7 +23,6 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-
     @Column(name = "amount_of_money")
     private Integer amountOfMoney;
 
@@ -42,13 +41,12 @@ public class User {
     @JoinColumn(name = "user_id")
     private Set<UserProgress> progresses = new HashSet<>();
 
-    public User(Long id, String firstName, String lastName, String email, String password, String role, Integer amountOfMoney, Set<Course> courses, Set<UserProgress> progresses) {
+    public User(Long id, String firstName, String lastName, String email, String password, Integer amountOfMoney, Set<Course> courses, Set<UserProgress> progresses) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-
         this.amountOfMoney = amountOfMoney;
         this.courses = courses;
         this.progresses = progresses;
@@ -57,17 +55,16 @@ public class User {
     public User() {
     }
 
-    public User(Long id, String firstName, String lastName, String email, String password, String role, Integer amountOfMoney) {
+    public User(Long id, String firstName, String lastName, String email, String password, Integer amountOfMoney) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-
         this.amountOfMoney = amountOfMoney;
     }
 
-    public User(String firstName, String lastName, String email, String password, String role, Integer amountOfMoney) {
+    public User(String firstName, String lastName, String email, String password, Integer amountOfMoney) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;

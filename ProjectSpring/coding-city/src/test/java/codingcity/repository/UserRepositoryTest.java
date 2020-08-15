@@ -18,16 +18,24 @@ class UserRepositoryTest {
 
     @Test
     void createUser() {
-        UserDTO userDTO = new UserDTO("sasha", "hladun", "olexandr","3", "USER", 5 );
+        UserDTO userDTO = new UserDTO("sasha", "hladun", "olexandr", "USER", 5 );
         UserDTO result = userService.createUser(userDTO);
         Assertions.assertEquals("sasha", result.getFirstName());
+    }
+
+
+    @Test
+    void createAdminUser() {
+        UserDTO userDTO = new UserDTO("ADMIN", "ADMIN", "ADMIN@ADMIN", "NIMDA12345", 0);
+        UserDTO result = userService.createUser(userDTO);
+        Assertions.assertEquals("ADMIN", result.getFirstName());
     }
 
 
 
     @Test
     void updateUser(){
-        User user = new User(1L,"Sasha", "hladun", "email","3", "USER", 9 );
+        User user = new User(1L,"Sasha", "hladun", "email","3", 9 );
         Long courseId = 2L;
         user.getCourses().add(courseService.findById(courseId));
         UserDTO result = userService.updateUser(user);

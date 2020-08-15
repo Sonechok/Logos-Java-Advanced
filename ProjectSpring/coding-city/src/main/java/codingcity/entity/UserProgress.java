@@ -26,6 +26,11 @@ public class UserProgress {
         this.progress = progress;
     }
 
+    public UserProgress(String progress, Task task) {
+        this.progress = progress;
+        this.task = task;
+    }
+
     public UserProgress(String progress) {
         this.progress = progress;
     }

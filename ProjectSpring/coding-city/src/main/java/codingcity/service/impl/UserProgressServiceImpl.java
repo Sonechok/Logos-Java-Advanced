@@ -43,11 +43,30 @@ public class UserProgressServiceImpl implements UserProgressService {
     }
 
     @Override
+    public UserProgress createUserProgressNoDTOForTask(UserProgress progress, Long userId) {
+        User user = userRepository.findById(userId).orElseThrow(()->new ResourceNotFoundException("user id",userId.toString()));
+        userProgressRepository.save(progress);
+        user.getProgresses().add(progress);
+        userRepository.save(user);
+        return progress;
+    }
+
+    @Override
     @Transactional
-    public UserProgressDTO updateUserProgress(UserProgress userProgress) {
-        UserProgress userProgressToUpdate = userProgressRepository.getOne(userProgress.getId());
-        userProgressToUpdate.setId(userProgress.getId());
-        BeanUtils.copyProperties(userProgress, userProgressToUpdate, "id");
+    public UserProgressDTO updateUserProgress(Long taskId, Long userId, String status) {
+        User user = userRepository.findById(userId).orElseThrow(()->new ResourceNotFoundException("user id",userId.toString()));
+        Set<UserProgress> userProgresses = user.getProgresses();
+        UserProgress userProgressUpdate = null;
+        for (UserProgress userProgress:userProgresses) {
+            if(userProgress.getTask().getId().equals(taskId)){
+                userProgressUpdate = userProgress;
+            }
+        }
+        if (userProgressUpdate == null){
+            return null;
+        }
+        UserProgress userProgressToUpdate = userProgressRepository.getOne(userProgressUpdate.getId());
+        userProgressToUpdate.setProgress(status);
         return userProgressMapper.toDTO(userProgressRepository.save(userProgressToUpdate));
     }
 
@@ -68,10 +87,10 @@ public class UserProgressServiceImpl implements UserProgressService {
                 progressesByTaskIdAndUserId = progress;
             }
         }
-        if (progressesByTaskIdAndUserId==null){
+/*        if (progressesByTaskIdAndUserId==null){
             String error = "[" + userId.toString() + "] [" + taskId.toString() + "]";
             throw new ResourceNotFoundException("[user progress by [userId] and [taskId]  ]",error);
-        }
+        }*/
         return progressesByTaskIdAndUserId;
     }
 }

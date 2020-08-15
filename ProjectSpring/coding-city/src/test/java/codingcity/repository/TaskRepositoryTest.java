@@ -17,9 +17,9 @@ class TaskRepositoryTest {
 
     @Test
     void createTask() {
-        TaskDTO taskDTO = new TaskDTO(12, "Task4", "Links");
-        TaskDTO result = taskService.createTask(taskDTO, 10L);
-        Assertions.assertEquals("Task4", result.getTask());
+        TaskDTO taskDTO = new TaskDTO(1, "Task1", "Links");
+        TaskDTO result = taskService.createTask(taskDTO, 5L);
+        Assertions.assertEquals("Task1", result.getTask());
     }
 
     @Test
@@ -27,5 +27,11 @@ class TaskRepositoryTest {
         List<Task> result = taskService.findAllByCourseId(2L);
         int countOfTasks = 4;
         Assertions.assertEquals(countOfTasks, result.size());
+    }
+
+    @Test
+    void findByNumberOfDayAndCourseName() {
+        Task result = taskService.findByNumberOfDayAndCourseName(2, "Java");
+        Assertions.assertEquals(2, result.getNumberOfDay());
     }
 }

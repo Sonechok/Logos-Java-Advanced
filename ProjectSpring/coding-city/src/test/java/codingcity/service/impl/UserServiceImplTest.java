@@ -37,7 +37,7 @@ class UserServiceImplTest {
 
     @Test
     void createUser() {
-        UserDTO userDTO = new UserDTO("sasha", "hladun", "newEmail","3", "USER", 5 );
+        UserDTO userDTO = new UserDTO("sasha", "hladun", "newEmail","3",  5 );
         when(userMapper.toDTO(any())).thenReturn(userDTO);
         UserDTO result = userService.createUser(userDTO);
         Assertions.assertEquals("sasha", result.getFirstName());
@@ -50,7 +50,7 @@ class UserServiceImplTest {
 
     @Test
     void updateUser(){
-        User user = new User(1L,"Sasha", "hladun", "email","3", "USER", 5 );
+        User user = new User(1L,"Sasha", "hladun", "email","3", 5 );
         UserDTO result = userService.updateUser(user);
         Assertions.assertEquals("Sasha", result.getFirstName());
     }

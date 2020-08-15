@@ -20,9 +20,6 @@ public class Course {
     @Column(nullable = false)
     private Integer price;
 
-    /*@ManyToMany
-    private Set<User> users = new HashSet<>();*/
-
     @OneToMany(cascade=CascadeType.ALL)
     @JoinColumn(name = "course_id")
     private Set<Task> tasks = new HashSet<>();

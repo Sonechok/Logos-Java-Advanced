@@ -29,18 +29,15 @@ class UserProgressRepositoryTest {
 
     @Test
     void updateUserProgress() {
-        Long progressId = 9L;
-        UserProgress userProgress = userProgressService.findById(progressId);
-        userProgress.setProgress(Status.done.toString());
-        UserProgressDTO result = userProgressService.updateUserProgress(userProgress);
+        UserProgressDTO result = userProgressService.updateUserProgress(9L, 3L, "toDo");
         Assertions.assertEquals(Status.done.toString(), result.getProgress());
     }
 
     @Test
     void findByUserIdAndTaskId(){
         Long taskId = 8L;
-        Long userId = 1L;
+        Long userId = 3L;
         UserProgress result = userProgressService.findByUserIdAndTaskId(userId, taskId);
-        Assertions.assertEquals(Status.done.toString(), result.getProgress());
+        Assertions.assertNull(result);
     }
 }

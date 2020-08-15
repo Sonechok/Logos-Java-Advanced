@@ -14,8 +14,10 @@ class CourseRepositoryTest {
 
     @Test
     void createCourse() {
-        CourseDTO courseDTO = new CourseDTO("Second", "description", 1000);
+        String name = "Python";
+        String description = "Python is an interpreted, high-level, general-purpose programming language.PYTHON IS GOOD";
+        CourseDTO courseDTO = new CourseDTO(name, description, 5000);
         CourseDTO result = courseService.createCourse(courseDTO);
-        Assertions.assertEquals("Second", result.getName());
+        Assertions.assertEquals(name, result.getName());
     }
 }

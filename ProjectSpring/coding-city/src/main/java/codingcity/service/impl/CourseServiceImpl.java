@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 public class CourseServiceImpl implements CourseService {
     private final CourseMapper courseMapper;
@@ -34,5 +36,20 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public Course findById(Long id) {
         return courseRepository.findById(id).orElseThrow(()->new ResourceNotFoundException("id",id.toString()));
+    }
+
+    @Override
+    public List<Course> findAll() {
+        return courseRepository.findAll();
+    }
+
+    @Override
+    public long count() {
+        return courseRepository.count();
+    }
+
+    @Override
+    public Course findByName(String name) {
+        return courseRepository.findByName(name).orElseThrow(()->new ResourceNotFoundException("name",name));
     }
 }

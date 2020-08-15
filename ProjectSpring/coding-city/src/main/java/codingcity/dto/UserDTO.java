@@ -12,26 +12,22 @@ public class UserDTO {
 
     private String password;
 
-    private String role;
-
     private Integer amountOfMoney;
 
-    public UserDTO(String firstName, String lastName, String email, String password, String role, Integer amountOfMoney) {
+    public UserDTO(String firstName, String lastName, String email, String password, Integer amountOfMoney) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.role = role;
         this.amountOfMoney = amountOfMoney;
     }
 
-    public UserDTO(Long id, String firstName, String lastName, String email, String password, String role, Integer amountOfMoney) {
+    public UserDTO(Long id, String firstName, String lastName, String email, String password,Integer amountOfMoney) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.role = role;
         this.amountOfMoney = amountOfMoney;
     }
 
@@ -76,14 +72,6 @@ public class UserDTO {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
     }
 
     public Integer getAmountOfMoney() {
