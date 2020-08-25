@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <style>
+        * {box-sizing: border-box}
+        .container {
+            padding: 16px;
+        }
+
+        input[type=text], input[type=number], input[type=email] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background:rgb(226, 226, 226);
+        }
+
+        .btn {
+            background-color: rgb(38, 170, 194);
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+        .btn:hover{
+            opacity: 1;
+        }
+
+        table {
+            font-size: 14px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th, td:first-child {
+            background: rgb(17, 194, 156);
+            color: white;
+            padding: 10px 20px;
+        }
+        th, td {
+            border-style: solid;
+            border-width: 0 1px 1px 0;
+            border-color: rgb(0, 0, 0);
+        }
+        td {
+            background: #D8E6F3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form id = "registration">
+          <h1>Task1</h1>
+          <label><b>First name</b></label>
+          <input type="text" name="firstName" required>
+
+          <label><b>Last name</b></label>
+          <input type="text" name="lastName" required>
+
+          <label><b>Age</b></label>
+          <input type="number" name="age" required ><br>
+          <small></small><br>
+          <label><b>Address</b></label>
+          <input type="text" name="address" required>
+      
+          <label><b>Email</b></label>
+          <input type="email" name="email" required>
+          <button type="submit" class="btn">Register</button>
+        </form>
+    <hr>
+    <h1>Task 2</h1>
+    <input type="button" onclick="showUsers()" value="Show All Users" class="btn">
+    <p id="users"></p>
+    <hr>
+    <h1>Task 3</h1>
+    <form id="formShow">
+        <label><b>ID:</b></label>
+        <input type="number" id="userId" required>
+        <input type="submit" value="Show User" class="btn">
+    </form>
+    <p id="showUserText"></p>
+    </div>
+    <script language="JavaScript" src="homework.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+2020-07-05 23:24:17 [INFO ] ConnectionManager:24 - Creating connection to data base
+2020-07-05 23:24:18 [DEBUG] ConnectionManager:33 - Connection was created successfully
+2020-07-05 23:24:18 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:19 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:19 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:19 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:19 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:20 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:20 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:20 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:20 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:20 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:20 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:20 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:20 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:20 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:20 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:31 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:31 [DEBUG] UserServiceImpl:34 - Find user by email admin@nimda
+2020-07-05 23:24:31 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:31 [INFO ] WelcomeController:18 - get request
+2020-07-05 23:24:31 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:35 [INFO ] ConnectionManager:24 - Creating connection to data base
+2020-07-05 23:24:35 [DEBUG] ConnectionManager:33 - Connection was created successfully
+2020-07-05 23:24:35 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:35 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:35 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:36 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:46 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:46 [DEBUG] CourseServiceImpl:46 - Save new course Course{id=null, name='C++', description='Description', price=12000}
+2020-07-05 23:24:46 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:24:46 [INFO ] WelcomeController:18 - get request
+2020-07-05 23:25:10 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:10 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:12 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:12 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:12 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:12 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:12 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:12 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:12 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:12 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:12 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:12 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:12 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:12 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:16 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:17 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:17 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:17 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:17 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:17 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:17 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:17 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:17 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:17 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:17 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:17 [INFO ] AuthorityFilter:23 - Filter log in
+2020-07-05 23:25:17 [INFO ] AuthorityFilter:23 - Filter log in
